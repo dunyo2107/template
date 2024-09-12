@@ -31,13 +31,44 @@ img{
     padding-right: 50px;
     margin-right: auto;
     margin-left: auto;
+    
 }
 
 .main-content{
     flex-grow: 1;
+    background-image: url("../img/BrickSmall.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-
+.romb{
+    border: 20px ridge rgb(147, 144, 140);
+    box-shadow: 10px, 10px, 30px rgba(0, 0, 0, 0.8);
+    display: flex;
+    background-image: url("../img/Home-decor.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.tabaqa{
+    border: 20px ridge rgb(147, 144, 140);
+    width: 200px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: transform .5s ease;
+}
+.tabaqa-left{
+    transform-origin: left center;
+}
+.tabaqa-right{
+    transform-origin: right center;
+}
+.romb:hover .tabaqa-left{
+     transform: perspective(2000px) rotateY(-120deg);
+}
+.romb:hover .tabaqa-right{
+    transform: perspective(2000px) rotateY(120deg);
+}
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
